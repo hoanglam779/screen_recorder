@@ -1,11 +1,11 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import time
 import PySimpleGUI as sg
-import pyautogui
+#import pyautogui
 import numpy as np
 import cv2
 from win32api import GetSystemMetrics
-from PIL import ImageGrab
+#from PIL import ImageGrab
 import datetime
 import dxcam
 import pyaudio
@@ -13,7 +13,7 @@ import wave
 import threading
 import subprocess
 import os
-import ffmpeg
+#import ffmpeg
 import errno
 import webbrowser
 from moviepy.editor import *
@@ -108,6 +108,8 @@ for i in range(au.get_device_count()):
         devicelist.append(inf['name'])
         devicedic[inf['name']]=inf['index']
 
+print("Muxing progress:")
+
 layout=[
     [sg.Text('Screen rec',key="-title-")],
     [sg.Text('Audio device:'),sg.Combo(devicelist,key="-device-")],
@@ -154,4 +156,6 @@ while True:
         sg.popup("Muxing completed")
 
 window.close()
+#Execute: python -m auto_py_to_exe
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
